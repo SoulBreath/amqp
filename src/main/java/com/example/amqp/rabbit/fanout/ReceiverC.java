@@ -1,0 +1,15 @@
+package com.example.amqp.rabbit.fanout;
+
+import org.springframework.amqp.rabbit.annotation.RabbitHandler;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
+@Component
+@RabbitListener(queues = "fanout.C")
+public class ReceiverC {
+
+    @RabbitHandler
+    public void process(String message){
+        System.out.println("fanout Receiver C : " + message);
+    }
+}

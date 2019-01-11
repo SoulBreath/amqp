@@ -1,0 +1,10 @@
+server:
+  port: 8090
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: root
+    password: Root@143
+    virtual-host: /
