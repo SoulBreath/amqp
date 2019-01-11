@@ -25,8 +25,14 @@ public class TestController {
         order2.setOrderId("456789");
         order2.setOrderName("小米8");
 
+        Order order3 = new Order();
+        order3.setOrderStatus(0);
+        order3.setOrderId("666666");
+        order3.setOrderName("荣耀9");
+
         delaySender.sendDelay(order1);
         delaySender.sendDelay(order2);
+        delaySender.sendDelay(order3);
         return "ok";
     }
 }
